@@ -50,8 +50,10 @@ async function playVideo() {
 async function background() {
   // 每10s检查视频是否播放完毕，是的话，刷新页面
   setInterval(() => {
-    video = getElement('video')
+    video = getElement('close')
     if (video.ended) {
+      next = document.getElementById(id)
+      if(next !== null) next.click()
       console.log('正在刷新页面...')
       window.location.reload()
     }
