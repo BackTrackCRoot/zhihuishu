@@ -52,7 +52,7 @@ async function background() {
   setInterval(() => {
     video = getElement('video')
     if (video.ended) {
-      next = document.getElementById(id)
+      next = document.getElementById('nextBtn')
       if(next !== null) next.click()
       console.log('正在刷新页面...')
       window.location.reload()
