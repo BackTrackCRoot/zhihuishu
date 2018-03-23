@@ -4,6 +4,8 @@
  * @date 2017-11-17
  * @modified Mrxn(admin@mrxn.net)
  * @mod date: 2018-03-05
+ * @modified CRoot(croot@xcroot.com)
+ * @mod date: 2018-03-23
  * @description 智慧树视频自动播放下一集，并以1.5倍速度，无声播放
  */
 
@@ -53,9 +55,11 @@ async function background() {
     video = getElement('video')
     if (video.ended) {
       next = document.getElementById('nextBtn')
-      if(next !== null) next.click()
-      console.log('正在刷新页面...')
-      window.location.reload()
+      if(next !== null){
+        console.log("准备播放下一集")
+        next.click()
+        begin()
+      }
     }
   }, 10000)
   // 每10s检查是否弹出'测试'对话框，并关闭

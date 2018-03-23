@@ -1,17 +1,17 @@
 {
   "manifest_version": 2,
   "name": "智慧树视频刷课插件",
-  "description": "智慧树视频自动播放下一集，1.5倍速度,无声播放，好人一生平安!,禁止滥用！",
-  "version": "1.2",
+  "description": "智慧树视频自动播放下一集，1.5倍速度,无声播放,试题破解防复制，可搜索（CRoot优化版）",
+  "version": "1.3",
   "browser_action": {
     "default_icon": "icon.png",
     "default_popup": "popup.html",
     "default_title": "智慧树视频刷课插件"
   },
   "content_scripts": [{
-    "matches": ["http://course.zhihuishu.com/*"],
+    "matches": ["http://course.zhihuishu.com/*","http://exam.zhihuishu.com/*"],
     "js": ["content.js"],
     "run_at": "document_end"
   }],
-  "web_accessible_resources": ["zhihuishu.js"]
+  "web_accessible_resources": ["zhihuishu.js","fuckCopy.js"]
 }
